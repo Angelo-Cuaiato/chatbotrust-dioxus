@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+openai
+python-dotenv
+gunicorn
+flask-cors
+redis

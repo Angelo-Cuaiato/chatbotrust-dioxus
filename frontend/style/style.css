@@ -1,0 +1,113 @@
+/* Importa uma fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reseta e define o estilo base do corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #e0e0e0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container principal com efeito de vidro (glassmorphism) */
+.container {
+    width: 90%;
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Estilo unificado para select e textarea */
+.subject-select, .input-box {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    resize: vertical; /* Permite redimensionar a textarea verticalmente */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.subject-select:focus, .input-box:focus {
+    outline: none;
+    border-color: #0f969c;
+    box-shadow: 0 0 8px rgba(15, 150, 156, 0.5);
+}
+
+.input-box {
+    min-height: 120px;
+}
+
+/* Botão de envio com gradiente e animação */
+.send-button {
+    background: linear-gradient(90deg, #0f969c, #3d5af1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.send-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(61, 90, 241, 0.4);
+}
+
+/* Caixa de resposta */
+.response-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 100px;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Mantém a formatação do texto da resposta */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message {
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+.chat-message.user {
+    background: linear-gradient(90deg, #3d5af1, #5c6bc0);
+    color: white;
+    align-self: flex-end; /* Alinha à direita */
+    margin-left: auto;
+}
+
+.chat-message.assistant {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    align-self: flex-start; /* Alinha à esquerda */
+}
