@@ -69,7 +69,7 @@ fn app() -> Element {
 // A função agora só recebe a pergunta como argumento.
 async fn send_question(question: &str) -> Result<Vec<ChatMessage>, reqwest::Error> {
     let client = Client::new();
-    let res = client.post("http://127.0.0.1:5000/api/chat") // Mude para a URL do Railway quando for para produção
+    let res = client.post("") // Muda para url de producao local ou online
         // O JSON enviado agora contém apenas a pergunta.
         .json(&json!({ "question": question }))
         .send()
